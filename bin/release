@@ -1,2 +1,2 @@
 #!/bin/bash
-zip -r guilatrova-crisp.zip ./*
+zip -r ../guilatrova-crisp.zip ./*
