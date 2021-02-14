@@ -1,0 +1,24 @@
+{{!< default}}
+{{#author}}
+    <section class="author">
+        {{#if profile_image}}
+            <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
+        {{/if}}
+
+
+        <div class="author-content">
+            <h2 class="author-name">{{name}}</h2>
+            {{> follow}}
+
+            {{#if bio}}
+                <p class="author-bio">{{bio}}</p>
+            {{/if}}
+            <p>
+                I've had the great pleasure of meeting and talking with people
+                that contributed to my personal growth with insights and experiences, thus I'm always open
+                to talk! Feel free to reach out through sending an email to <span><a href="#">hello AT guilatrova.dev</a></span>
+            </p>
+        </div>
+
+    </section>
+{{/author}}
