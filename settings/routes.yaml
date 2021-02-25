@@ -1,0 +1,18 @@
+routes:
+  /books/:
+    controller: channel
+    filter: tag:books
+
+  /projects/:
+    controller: channel
+    filter: tag:projects
+    template: projects
+
+collections:
+  /:
+    permalink: /{slug}/
+    template: index
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
