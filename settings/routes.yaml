@@ -2,6 +2,7 @@ routes:
   /books/:
     controller: channel
     filter: tag:books
+    template: books
 
   /projects/:
     controller: channel
