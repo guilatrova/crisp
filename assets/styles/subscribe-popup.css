@@ -1,5 +1,6 @@
 .popup-container {
-    z-index: 99999;
+    /* always 1 less than header */
+    z-index: 2;
     visibility: hidden;
     opacity: 0;
 
@@ -10,7 +11,7 @@
     bottom: 0;
     height: 100%;
     width: 100%;
-    font-family: segoe ui;
+    font-family: "Open Sans", sans-serif;
     overflow: hidden;
 
     transition: .5s all;
@@ -88,7 +89,7 @@
     min-width: 0;
     max-width: 99999px;
     width: 225px;
-    box-shadow: 0 0 30px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 0 30px 0 #979797;
     padding: 22px 26px;
     border-radius: 20px;
     position: absolute;
@@ -120,7 +121,7 @@
 .popup-prompt__text {
     margin: 0;
     margin-bottom: 15px;
-    font-size: 13px;
+    font-size: 1em;
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
@@ -131,7 +132,6 @@
 
 .popup-prompt__confirm-btn,
 .popup-prompt__cancel-btn {
-    font-family: 'Segoe ui';
     font-size: 13px;
     font-weight: 600;
     font-stretch: normal;
@@ -140,7 +140,7 @@
     letter-spacing: normal;
     text-align: left;
     text-decoration: none;
-    color: #772df0;
+    color: #f19809;
     background: none;
     border: none;
     padding: 0;
@@ -167,6 +167,8 @@
 }
 
 .popup-prompt__tail {
+    filter: drop-shadow(-60px 10px 30px #979797);
+
     position: absolute;
     left: 60px;
     bottom: -25px;

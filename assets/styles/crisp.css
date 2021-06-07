@@ -19,6 +19,7 @@ body {
 }
 /* Blocks */
 header {
+	z-index: 3;
 	border-right: 1px #eee solid;
 	padding: 2em;
 	position:fixed;
