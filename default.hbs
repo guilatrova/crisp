@@ -14,7 +14,9 @@
 			<link rel="stylesheet" type="text/css" href="{{asset '/styles/crisp.css'}}">
 			<link rel="stylesheet" type="text/css" href="{{asset '/styles/guilatrova.css'}}">
 			<link rel="stylesheet" type="text/css" href="{{asset '/styles/author.css'}}">
-
+			{{#is "post"}}
+				<link rel="stylesheet" type="text/css" href="{{asset '/styles/subscribe-popup.css'}}">
+			{{/is}}
 			{{! Responsive Meta Tags }}
 	    <meta name="HandheldFriendly" content="True" />
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />

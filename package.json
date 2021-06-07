@@ -1,7 +1,7 @@
 {
     "name"        : "guilatrova-crisp",
     "description" : "A minimalist, responsive, and open-source theme for Ghost",
-    "version"     : "1.0.0-f",
+    "version"     : "1.0.0-g",
     "engines": {
         "ghost-api": "v4"
     },
