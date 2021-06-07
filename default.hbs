@@ -14,6 +14,7 @@
 			<link rel="stylesheet" type="text/css" href="{{asset '/styles/crisp.css'}}">
 			<link rel="stylesheet" type="text/css" href="{{asset '/styles/guilatrova.css'}}">
 			<link rel="stylesheet" type="text/css" href="{{asset '/styles/author.css'}}">
+
 			{{! Responsive Meta Tags }}
 	    <meta name="HandheldFriendly" content="True" />
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,7 +38,7 @@
 			{{{body}}}
 		</main>
 		<footer id="footer">
-			<section id="footer-message">&copy; {{date format='YYYY'}} {{@blog.title}}. Powered by <a href="http://ghost.org" target="_blank">Ghost</a> and <a href="https://github.com/kathyqian/crisp" target="_blank">Crisp</a>.</section>
+			<section id="footer-message">&copy; {{date format='YYYY'}} {{@site.title}}. Powered by <a href="http://ghost.org" target="_blank">Ghost</a> and <a href="https://github.com/kathyqian/crisp" target="_blank">Crisp</a>.</section>
 		</footer>
 	{{ghost_foot}}
 
