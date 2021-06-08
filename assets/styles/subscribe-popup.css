@@ -187,3 +187,40 @@
     transform: none;
     }
 }
+
+/* Subscribe Popup Form */
+
+.popup-subscribe-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+
+    background-color: rgba(22,22,22,0.5);
+}
+
+.popup-subscribe-content{
+    position: relative;
+    top: 0;
+    left: calc(50% - 212.5px);
+    width: 425px;
+    height: 325px;
+
+    opacity: 0;
+    background: white;
+
+    border-radius: 15px;
+    border: 1px solid #979797;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.15);
+
+    width: 425px;
+    padding: 30px;
+}
+
+.popup-subscribe-content--show{
+    opacity: 1;
+    top: calc(50% - 177.5px);
+    transition: .4s;
+}

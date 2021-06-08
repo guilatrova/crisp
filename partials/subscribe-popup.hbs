@@ -2,7 +2,7 @@
   <div class="popup">
     <img
       class="popup__illustration"
-      src="https://frontendor.com/Popup/illustration-2.png"
+      src="{{asset '/img/popup-actor.png'}}"
     />
     <div class="popup__prompt popup-prompt">
       <p class="popup-prompt__text">
@@ -10,11 +10,10 @@
         reading? If you do, you can be the first to know when I post cool stuff!
       </p>
       <div class="popup-prompt__footer">
-        <a
-          href="https://frontendor.com"
-          target="_blank"
-          class="popup-prompt__confirm-btn"
-        >I'm loving it!</a>
+        <button onclick="showSubscribe(event)" class="popup-prompt__confirm-btn">
+          Sure! Let me know
+        </button>
+
         <button onclick="closePopup(event)" class="popup-prompt__cancel-btn">
           No, thanks
         </button>
@@ -33,6 +32,13 @@
     </div>
   </div>
 </div>
+
+<div class="popup-subscribe-container" style="display: none">
+  <div class="popup-subscribe-content">
+    {{> subscribe}}
+  </div>
+</div>
+
 <script>
     var popupContainer = document.querySelector('.popup-container')
     var popupPrompt = document.querySelector('.popup-prompt')
@@ -62,6 +68,18 @@
         popupContainer.classList.remove('popup-container--show')
         popupClosed = true
       }, 200)
+    }
+
+    function showSubscribe() {
+      closePopup()
+      var subscribePopup = document.querySelector('.popup-subscribe-container')
+      var subscribeContent = document.querySelector('.popup-subscribe-content')
+
+      if (subscribePopup.hasAttribute('style'))
+        subscribePopup.style.display = ''
+        setTimeout(function () {
+          subscribeContent.classList.add('popup-subscribe-content--show')
+        }, 200)
     }
 
     function setupFrontendorPopup(options) {
