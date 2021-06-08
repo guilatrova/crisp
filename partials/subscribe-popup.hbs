@@ -35,6 +35,10 @@
 
 <div class="popup-subscribe-container" style="display: none">
   <div class="popup-subscribe-content">
+    <div class="popup-subscribe-content-x" onclick="closeSubscribePopup(event)">
+      <div class="one"></div>
+      <div class="two"></div>
+    </div>
     {{> subscribe}}
   </div>
 </div>
@@ -42,6 +46,8 @@
 <script>
     var popupContainer = document.querySelector('.popup-container')
     var popupPrompt = document.querySelector('.popup-prompt')
+    var subscribePopup = document.querySelector('.popup-subscribe-container')
+    var subscribeContent = document.querySelector('.popup-subscribe-content')
     /* If the user close the popup, don't show it again */
     var popupClosed = false
 
@@ -70,11 +76,15 @@
       }, 200)
     }
 
+    function closeSubscribePopup() {
+      subscribePopup.classList.remove('popup-subscribe-content--show')
+      setTimeout(function () {
+        subscribePopup.style.display = 'none'
+      }, 200)
+    }
+
     function showSubscribe() {
       closePopup()
-      var subscribePopup = document.querySelector('.popup-subscribe-container')
-      var subscribeContent = document.querySelector('.popup-subscribe-content')
-
       if (subscribePopup.hasAttribute('style'))
         subscribePopup.style.display = ''
         setTimeout(function () {
