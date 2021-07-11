@@ -9,6 +9,11 @@ routes:
     filter: tag:projects
     template: projects
 
+  /goals/:
+    controller: channel
+    filter: tag:goals
+    template: goals
+
 collections:
   /:
     permalink: /{slug}/
