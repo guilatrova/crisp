@@ -14,7 +14,7 @@
           Sure! Let me know
         </button>
 
-        <button onclick="closePopup(event)" class="popup-prompt__cancel-btn">
+        <button onclick="onDontSubscribe(event)" class="popup-prompt__cancel-btn">
           No, thanks
         </button>
       </div>
@@ -59,21 +59,44 @@
       }
     })
 
-    function dontShowAnymore() {
+    function onDontSubscribe() {
+      const today = new Date()
+      const tomorrow = new Date(today)
+      tomorrow.setDate(tomorrow.getDate() + 1)
 
+      localStorage.dontBotherUntil = tomorrow
+      localStorage.subscribed = false
+
+      closePopup()
+    }
+
+    function onSubscribe() {
+      localStorage.subscribed = true
     }
 
     function shouldShowPopup() {
-      if(localStorage.last) {
+      const now = new Date()
+      const dontBotherUntil = new Date(localStorage.dontBotherUntil)
 
+      if (localStorage.subscribed == "true") {
+        return false
+      }
+
+      if (now < dontBotherUntil) {
+        return false
+      }
+
+      return true
     }
 
     function showPopup() {
-      if (popupContainer.hasAttribute('style'))
-        popupContainer.style.display = ''
+      if (shouldShowPopup()) {
+        if (popupContainer.hasAttribute('style'))
+          popupContainer.style.display = ''
 
-      if (!popupClosed && !popupContainer.classList.contains('popup-container--show'))
-        popupContainer.classList.add('popup-container--show')
+        if (!popupClosed && !popupContainer.classList.contains('popup-container--show'))
+          popupContainer.classList.add('popup-container--show')
+      }
     }
 
     function closePopup() {
@@ -93,6 +116,7 @@
     }
 
     function showSubscribeForm() {
+      onSubscribe()
       closePopup()
       if (subscribePopup.hasAttribute('style'))
         subscribePopup.style.display = ''
