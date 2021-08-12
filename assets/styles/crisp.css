@@ -384,6 +384,11 @@ footer a:hover {
 	margin: auto;
 }
 
+/* Center Twitter cards */
+.kg-card div {
+	margin: auto;
+}
+
 .kg-image-card,
 .kg-gallery-card {
     margin: 0 0 1.5em;
