@@ -378,6 +378,12 @@ footer a:hover {
     margin: 0 .5em;
 }
 
+.kg-image {
+	height: auto;
+	display: block;
+	margin: auto;
+}
+
 .kg-image-card,
 .kg-gallery-card {
     margin: 0 0 1.5em;
