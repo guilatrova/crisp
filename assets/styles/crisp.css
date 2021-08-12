@@ -391,7 +391,9 @@ footer a:hover {
 
 .kg-image-card figcaption,
 .kg-gallery-card figcaption {
-    margin: -1.0em 0 1.5em;
+    text-align: center;
+    font-size: small;
+	color: #777
 }
 
 .kg-gallery-container {
