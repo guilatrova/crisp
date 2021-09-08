@@ -10,3 +10,7 @@
     text-align: justify;
     padding-right: 20px;
 }
+
+.author-content h2 {
+    margin-bottom: 0px;
+}

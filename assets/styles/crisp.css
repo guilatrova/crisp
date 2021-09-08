@@ -169,21 +169,17 @@ header #logo img {
 	border: none;
 }
 #follow-icons {
+	display: flex;
+	align-items: baseline;
 	font-size: 0.7em;
 	margin-top: -0.7em;
 	margin-bottom: 1.5em;
 }
 #follow-icons a {
 	color: #ccc;
-}
-#follow-icons span {
-	vertical-align:top;
-	margin-left:-0.15em;
-	margin-right:-0.15em;
-}
-#follow-icons span .fa-stack-1x {
-	font-size:1.05em;
-	line-height:1.9em;
+	margin: 0px 2px;
+	display: flex;
+	text-decoration: none;
 }
 header h6 {
 	margin-top:0.5em;
