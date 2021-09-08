@@ -192,9 +192,14 @@ header h6 {
 article span.post-stamp {
 	color:#888;
 }
+article span.commit-signature {
+	color: #777;
+	font-size: small;
+}
+
 h1.post-title {
 	margin-top:0.35em;
-	margin-bottom: 0.6em;
+	margin-bottom: 0px;
 }
 h3.post-title {
 	margin-top:0.4em;
