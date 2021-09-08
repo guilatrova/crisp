@@ -95,17 +95,17 @@ a:hover {
 }
 
 /* Navigation */
-nav a {
+nav.menu a {
 	position: relative;
 }
 
-nav a:hover::before {
+nav.menu a:hover::before {
 	content: '❯ ';
     position: absolute;
     left: -20px
 }
 
-nav a:hover {
+nav.menu a:hover {
 	text-decoration: none;
 }
 
