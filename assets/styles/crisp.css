@@ -93,6 +93,22 @@ a {
 a:hover {
 	text-decoration:underline;
 }
+
+/* Navigation */
+nav a {
+	position: relative;
+}
+
+nav a:hover::before {
+	content: '❯ ';
+    position: absolute;
+    left: -20px
+}
+
+nav a:hover {
+	text-decoration: none;
+}
+
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	font-weight:400 !important;
 }
