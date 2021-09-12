@@ -1,8 +1,7 @@
-<div class="emailoctopus-form-wrapper emailoctopus-form-default null"
-  style="font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(26, 26, 26);">
+<div class="emailoctopus-form-wrapper emailoctopus-form-default null">
 
   <h2 class="emailoctopus-heading">
-    Be the first to know when I post cool stuff 🚀
+    🚀 Don't miss the next posts! 📥
   </h2>
 
   <p class="emailoctopus-success-message"></p>
@@ -18,27 +17,25 @@
     data-message-consent-required="Please check the checkbox to indicate your consent."
     data-message-invalid-parameters-error="This form has missing or invalid fields."
     data-message-unknown-error="Sorry, an unknown error has occurred. Please try again later."
-    class="emailoctopus-form">
-
-    <div class="emailoctopus-form-row">
-      <label for="field_0">
-        📨 Email address
-      </label>
-
+    class="emailoctopus-form"
+  >
+    <div class="form-inputs">
       <input id="field_0" name="field_0" type="email" placeholder="Email" required="required">
       <input id="field_4" name="field_4" type="hidden" value="{{url absolute="true"}}">
-    </div>
 
-    <div aria-hidden="true" class="emailoctopus-form-row-hp">
-      <input type="text" name="hpc4b27b6e-eb38-11e9-be00-06b4694bee2a" tabindex="-1" autocomplete="nope">
-    </div>
-    <div class="emailoctopus-form-row-subscribe">
-      <input type="hidden" name="successRedirectUrl">
-      <button type="submit" style="background-color: #f19809; color: rgb(0, 0, 0); font-family: inherit;">
-        Subscribe!
-      </button>
+      <div aria-hidden="true" class="emailoctopus-form-row-hp">
+        <input type="hidden" name="hpc4b27b6e-eb38-11e9-be00-06b4694bee2a" tabindex="-1" autocomplete="nope">
+      </div>
+
+      <div class="emailoctopus-form-row-subscribe">
+        <input type="hidden" name="successRedirectUrl">
+        <button type="submit">
+          Subscribe
+        </button>
+      </div>
     </div>
   </form>
 </div>
+
 <script src="https://emailoctopus.com/bundles/emailoctopuslist/js/1.6/form-embed.js">
 </script>
