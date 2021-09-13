@@ -351,6 +351,7 @@ footer a:hover {
 .kg-bookmark-metadata,
 .kg-bookmark-description {
     margin-top: .5em;
+	font-weight: 100;
 }
 
 .kg-bookmark-metadata {
