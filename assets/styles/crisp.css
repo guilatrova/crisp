@@ -29,6 +29,7 @@ header {
 	width:13.5em;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background: linear-gradient(45deg, #1F2121, #0e0f0f);
 }
 #content {
 	display: block;
@@ -167,6 +168,9 @@ header #logo img {
 	-moz-border-radius: 4.5em;
 	-webkit-border-radius: 4.5em;
 	border: none;
+}
+header p {
+	color: #848B8B
 }
 #follow-icons {
 	display: flex;
