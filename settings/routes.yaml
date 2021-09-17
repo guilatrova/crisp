@@ -14,6 +14,11 @@ routes:
     filter: tag:goals
     template: goals
 
+  /series/python-like-a-pro/:
+    controller: channel
+    filter: tag:python-like-pro
+    template: series/python-like-pro
+
 collections:
   /:
     permalink: /{slug}/
