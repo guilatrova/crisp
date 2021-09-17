@@ -455,3 +455,11 @@ footer a:hover {
 .kg-gallery-image:not(:first-of-type) {
     margin: 0 0 0 0.75em;
 }
+/* Footnotes */
+.footnotes {
+	padding-top: 10px;
+}
+.footnotes small {
+	font-size: xx-small;
+	display: block;
+}
