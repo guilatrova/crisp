@@ -1,8 +1,8 @@
-.emailoctopus-form-wrapper .form-inputs {
+.subscribe-form-wrapper form {
     display: flex;
 }
 
-.emailoctopus-form-wrapper form input {
+.subscribe-form-wrapper form input {
     border: 1px solid #e9ecef;
     border-radius: .25rem;
     color: #495057;
@@ -14,7 +14,7 @@
     padding: .375rem .75rem;
 }
 
-.emailoctopus-form-wrapper form button {
+.subscribe-form-wrapper form button {
     border: 1px solid transparent;
     border-radius: .25rem;
 
