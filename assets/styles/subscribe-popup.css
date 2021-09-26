@@ -37,12 +37,6 @@
     margin: auto;
 }
 
-@media(min-width: 800px) {
-    .popup {
-    top: 0;
-    }
-}
-
 .popup-container--show .popup {
     animation: slideIllustrationInLeft .4s;
 }
@@ -66,21 +60,10 @@
     transition: 1s;
 }
 
-@media(min-width: 800px) {
-    .popup__illustration {
-    transform: scale(1) translateX(-100%) rotate(-20deg);
-    }
-}
-
 .popup-container--show .popup__illustration {
     transform: scale(.7) rotate(0deg) translateX(0%);
 }
 
-@media(min-width: 800px) {
-    .popup-container--show .popup__illustration {
-    transform: scale(1) rotate(0deg) translateX(17.5em);
-    }
-}
 
 .popup-prompt {
     left: 20px;
@@ -100,16 +83,6 @@
     transform-origin: left bottom;
     transform: scale(.8);
     opacity: 0;
-}
-
-@media(min-width: 800px) {
-    .popup-prompt {
-    left: calc(17.5em + 150px);
-    top: 50px;
-    min-width: 300px;
-    max-width: 370px;
-    transform-origin: left top;
-    }
 }
 
 .popup-prompt--show {
@@ -177,17 +150,6 @@
     transform: rotate(-90deg);
 }
 
-@media(min-width: 800px) {
-    .popup-prompt__tail {
-    left: -47px;
-    top: 15px;
-    bottom: auto;
-    width: 47.645px;
-    height: 65.664px;
-    transform: none;
-    }
-}
-
 /* Subscribe Popup Form */
 
 .popup-subscribe-container{
@@ -249,4 +211,37 @@
 .popup-subscribe-content-x .two {
     transform: rotate(-45deg)
     translate(-4px, 4px);
+}
+
+/* For bigger screens screens: from 801px width upwards */
+
+@media(min-width: 801px) {
+    .popup {
+        top: 0;
+    }
+
+    .popup-prompt__tail {
+        left: -47px;
+        top: 15px;
+        bottom: auto;
+        width: 47.645px;
+        height: 65.664px;
+        transform: none;
+    }
+
+    .popup__illustration {
+        transform: scale(1) translateX(-100%) rotate(-20deg);
+    }
+
+    .popup-container--show .popup__illustration {
+        transform: scale(1) rotate(0deg) translateX(17.5em);
+    }
+
+    .popup-prompt {
+        left: calc(17.5em + 150px);
+        top: 50px;
+        min-width: 300px;
+        max-width: 370px;
+        transform-origin: left top;
+    }
 }
