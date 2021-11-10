@@ -19,6 +19,11 @@ routes:
     filter: tag:python-like-pro
     template: series/python-like-pro
 
+  /series/antifragile-dev/:
+    controller: channel
+    filter: tag:antifragile-dev
+    template: series/antifragile-dev
+
 collections:
   /:
     permalink: /{slug}/
