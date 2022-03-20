@@ -1,0 +1,39 @@
+<!-- Ace Editor -->
+<script src="https://pagecdn.io/lib/ace/1.4.5/ace.js" integrity="sha256-5Xkhn3k/1rbXB+Q/DX/2RuAtaB4dRRyQvMs83prFjpM=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    // It requires a div "#ace-editor" to exist within the page.
+    var editor = ace.edit("ace-editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/python");
+</script>
+
+<!-- Xterm -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.css" integrity="sha512-iLYuqv+v/P4u9erpk+KM83Ioe/l7SEmr7wB6g+Kg1qmEit8EShDKnKtLHlv2QXUp7GGJhmqDI+1PhJYLTsfb8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.js" integrity="sha512-2PRgAav8Os8vLcOAh1gSaDoNLe1fAyq8/G3QSdyjFFD+OqNjLeHE/8q4+S4MEZgPsuo+itHopj+hJvqS8XUQ8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script type="text/javascript">
+    const term = new Terminal({
+        theme: {
+            background: '#1a1c1c'
+        }
+    });
+    term.open(document.getElementById('xterm'));
+</script>
+
+<!-- Pyodide -->
+<script src="https://cdn.jsdelivr.net/pyodide/v0.19.1/full/pyodide.js"></script>
+<script type="text/javascript">
+    let pyodide = null;
+    async function loadpyodide(){
+        pyodide = await loadPyodide({
+            indexURL : "https://cdn.jsdelivr.net/pyodide/v0.19.1/full/"
+        });
+    }
+    loadpyodide();
+
+    function executePyodide() {
+        const writtenCode = editor.getValue();
+        const output = pyodide.runPython(writtenCode)
+        term.write(output)
+    }
+</script>
