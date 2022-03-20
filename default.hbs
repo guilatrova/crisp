@@ -52,7 +52,33 @@
 		</footer>
 	{{ghost_foot}}
 
-	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
+	<!-- Coding styles -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<!-- For the highlight badge -->
+	<script src="https://unpkg.com/highlightjs-badge/highlightjs/highlight.pack.js"></script>
+	<script src="https://unpkg.com/highlightjs-badge/highlightjs-badge.min.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+
+		document.addEventListener("DOMContentLoaded", (event) => {
+			var pres = document.querySelectorAll("pre>code");
+			for (var i = 0; i < pres.length; i++) {
+				hljs.highlightBlock(pres[i]);
+			}
+
+			var options = {
+				contentSelector: "article",
+				loadDelay:0,
+				copyIconClass: "code-badge-copy-icon",
+				checkIconClass: "code-badge-check-icon",
+				onBeforeTextCopied: function(text, codeElement) {
+					return text;
+				}
+			};
+
+			window.highlightJsBadge(options);
+		});
+	</script>
 	</body>
 </html>
