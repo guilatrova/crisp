@@ -2,7 +2,7 @@
 <!-- Elements -->
 
 <div id="code-space-wrapper">
-    <div class="outer">
+    <div class="outer" onclick="toggleCodeSpace()">
         <div class="dot red"><span>x</span></div>
         <div class="dot amber"><span>&ndash;</span></div>
         <div class="dot green"><span>+</span></div>
@@ -26,6 +26,13 @@ foo()
     </div>
 </div>
 
+<!-- Toolbar functions -->
+<script type="text/javascript">
+function toggleCodeSpace() {
+    const element = document.getElementById("code-space-wrapper");
+    element.classList.toggle("open");
+}
+</script>
 
 <!-- Ace Editor -->
 <script src="https://pagecdn.io/lib/ace/1.4.5/ace.js" integrity="sha256-5Xkhn3k/1rbXB+Q/DX/2RuAtaB4dRRyQvMs83prFjpM=" crossorigin="anonymous"></script>

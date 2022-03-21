@@ -57,6 +57,11 @@
 
   z-index: 3;
   left: 50%;
+  transform: translateY(calc(100% - 35px)) translateX(-50%);
+  transition: transform 1s;
+}
+
+#code-space-wrapper.open {
   transform: translateX(-50%);
 }
 
