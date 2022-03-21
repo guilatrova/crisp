@@ -63,10 +63,15 @@
 #code-space {
   display: flex;
   flex-direction: row;
+  background: #bbb /* This + child margin creates a similar vertical bar */
 }
 
 .code-space-child {
   flex-basis: 50%
+}
+
+#code-space .code-space-child:first-child {
+  margin-right: 1px;
 }
 
 #code-space-bottom-bar {
