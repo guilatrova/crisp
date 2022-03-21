@@ -2,17 +2,20 @@
 <!-- Elements -->
 
 <div id="code-space">
-<div class="code-space-child">
-<div id="ace-editor">
+    <div class="code-space-child">
+        <div id="ace-editor">
 def foo() -&gt; str:
     return "Welcome to Gui Commits"
 
 foo()
-</div>
-</div>
-<div class="code-space-child">
-<div id="xterm"></div>
-</div>
+        </div>
+        <div id="ace-editor-bottom-bar">
+            <button onclick="executePyodide()">&#9654; Run</button>
+        </div>
+    </div>
+    <div class="code-space-child">
+        <div id="xterm"></div>
+    </div>
 </div>
 
 
@@ -52,6 +55,6 @@ foo()
     function executePyodide() {
         const writtenCode = editor.getValue();
         const output = pyodide.runPython(writtenCode)
-        term.write(output)
+        term.writeln(output)
     }
 </script>

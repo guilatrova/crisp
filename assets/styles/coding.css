@@ -33,3 +33,25 @@
 .code-space-child {
   flex-basis: 50%
 }
+
+#ace-editor-bottom-bar {
+  display: flex;
+  flex-flow: row-reverse;
+
+  position: relative;
+  margin-top: -40px;
+  padding-right: 5px;
+}
+
+#ace-editor-bottom-bar button {
+  border: 1px solid transparent;
+  border-radius: .25rem;
+
+  background-color: #15b532;
+  color: #fff;
+  cursor: pointer;
+
+  padding: .375rem .75rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
