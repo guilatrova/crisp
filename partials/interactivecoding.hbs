@@ -47,7 +47,9 @@ foo()
     let pyodide = null;
     async function loadpyodide(){
         pyodide = await loadPyodide({
-            indexURL : "https://cdn.jsdelivr.net/pyodide/v0.19.1/full/"
+            indexURL : "https://cdn.jsdelivr.net/pyodide/v0.19.1/full/",
+            stdout: (text) => {term.writeln(text);},
+            stderr: (text) => {term.writeln(text);}
         });
     }
     loadpyodide();
@@ -55,6 +57,8 @@ foo()
     function executePyodide() {
         const writtenCode = editor.getValue();
         const output = pyodide.runPython(writtenCode)
-        term.writeln(output)
+        if (output) {
+            term.writeln(output)
+        }
     }
 </script>
