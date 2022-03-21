@@ -26,15 +26,22 @@
 }
 
 /* Code Space */
+#code-space-wrapper {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
 #code-space {
   display: flex;
   flex-direction: row;
 }
+
 .code-space-child {
   flex-basis: 50%
 }
 
-#ace-editor-bottom-bar {
+#code-space-bottom-bar {
   display: flex;
   flex-flow: row-reverse;
 
@@ -43,7 +50,7 @@
   padding-right: 5px;
 }
 
-#ace-editor-bottom-bar button {
+#code-space-bottom-bar button {
   border: 1px solid transparent;
   border-radius: .25rem;
 
@@ -54,4 +61,46 @@
   padding: .375rem .75rem;
   line-height: 1.5;
   font-weight: bold;
+}
+
+@media(max-width: 800px) {
+  #code-space {
+    display: none
+  }
+}
+
+/* Code Space Top Toolbar */
+/* Inspired by: https://codepen.io/swillis/pen/RwzpbP */
+#code-space-wrapper .outer {
+  background: #273138;
+  opacity: 0.9;
+
+  box-sizing: border-box;
+  padding: 0 10px;
+  width: 100%;
+  border-radius: 7px 7px 0px 0px;
+}
+
+#code-space-wrapper .outer .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #f9f9f9;
+  border-radius: 50%;
+  margin: 0 4px 0 0;
+}
+
+#code-space-wrapper .outer .dot.red {
+  background: #FF6057;
+  border: 1px solid #E14640;
+}
+
+#code-space-wrapper .outer .dot.amber {
+  background: #FFBD2E;
+  border: 1px solid #DFA123;
+}
+
+#code-space-wrapper .outer .dot.green {
+  background: #27C93F;
+  border: 1px solid #1DAD2B;
 }
