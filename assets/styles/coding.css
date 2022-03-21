@@ -28,8 +28,12 @@
 /* Code Space */
 #code-space-wrapper {
   position: fixed;
-  width: 100%;
+  width: 90%;
   bottom: 0;
+
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #code-space {
