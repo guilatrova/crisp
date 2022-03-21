@@ -121,19 +121,57 @@
   background: #f9f9f9;
   border-radius: 50%;
   margin: 0 4px 0 0;
+
+  overflow: hidden;
+  cursor: pointer;
 }
 
+/* Code Space Top Toolbar Buttons */
 #code-space-wrapper .outer .dot.red {
   background: #FF6057;
   border: 1px solid #E14640;
+  color: #820005
+}
+
+#code-space-wrapper .outer .dot.red:active {
+  background: #c14645;
+  border: 1px solid #b03537;
+  color: #4e0002;
 }
 
 #code-space-wrapper .outer .dot.amber {
   background: #FFBD2E;
   border: 1px solid #DFA123;
+  color: #9a5518;
+}
+
+#code-space-wrapper .outer .dot.amber:active {
+  background: #c08e38;
+  border: 1px solid #af7c33;
+  color: #5a2607
 }
 
 #code-space-wrapper .outer .dot.green {
   background: #27C93F;
   border: 1px solid #1DAD2B;
+  color: #006519;
+}
+
+#code-space-wrapper .outer .dot.green:active {
+  background: #029740;
+  border: 1px solid #128435;
+  color: #003107;
+}
+
+#code-space-wrapper .outer .dot span {
+  display: none;
+
+  text-align: center;
+  font-weight: 700;
+  line-height: 9px;
+  font-size: small;
+}
+
+#code-space-wrapper .outer:hover .dot span {
+  display: block;
 }
