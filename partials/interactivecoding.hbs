@@ -26,9 +26,13 @@ foo()</div>
 
 <!-- Toolbar functions -->
 <script type="text/javascript">
+let codeSpaceOpen = false;
+const isInteractive = true;
+
 function toggleCodeSpace() {
     const element = document.getElementById("code-space-wrapper");
     element.classList.toggle("open");
+    codeSpaceOpen = !codeSpaceOpen;
 }
 </script>
 

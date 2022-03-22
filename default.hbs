@@ -72,7 +72,18 @@
 				loadDelay:0,
 				copyIconClass: "code-badge-copy-icon",
 				checkIconClass: "code-badge-check-icon",
-				onBeforeTextCopied: function(text, codeElement) {
+				onBeforeCodeCopied: function(text, codeElement) {
+					if (typeof isInteractive !== 'undefined') {
+						if (isInteractive && editor) {
+							if (!codeSpaceOpen) {
+								toggleCodeSpace();
+							}
+
+							editor.setValue(text, 1);
+							editor.focus();
+						}
+					}
+
 					return text;
 				}
 			};
