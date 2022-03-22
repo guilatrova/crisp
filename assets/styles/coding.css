@@ -92,13 +92,21 @@
   border: 1px solid transparent;
   border-radius: .25rem;
 
-  background-color: #15b532;
-  color: #fff;
   cursor: pointer;
 
   padding: .375rem .75rem;
   line-height: 1.5;
   font-weight: bold;
+}
+
+#code-space-bottom-bar button.execute {
+  background-color: #15b532;
+  color: #fff;
+}
+
+#code-space-bottom-bar button.clear {
+  background-color: #007bff;
+  color: #fff;
 }
 
 @media(max-width: 800px) {

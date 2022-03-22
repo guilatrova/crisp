@@ -15,11 +15,24 @@
 
 foo()</div>
             <div id="code-space-bottom-bar">
-                <button onclick="executePyodide()">&#9654; Run</button>
+                <button
+                    class="execute"
+                    onclick="executePyodide()"
+                    title="[cmd]+Enter or [ctrl]+Enter">
+                    &#9654; Run
+                </button>
             </div>
         </div>
         <div class="code-space-child">
             <div id="xterm"></div>
+            <div id="code-space-bottom-bar">
+                <button
+                    class="clear"
+                    onclick="clearXterm()"
+                    title="clear output">
+                    Clear
+                </button>
+            </div>
         </div>
     </div>
 </div>
@@ -56,6 +69,10 @@ function toggleCodeSpace() {
         }
     });
     term.open(document.getElementById('xterm'));
+
+    function clearXterm() {
+        term.clear();
+    }
 </script>
 
 <!-- Pyodide -->
