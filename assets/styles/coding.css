@@ -86,6 +86,9 @@
   position: relative;
   margin-top: -40px;
   padding-right: 5px;
+
+  /* Required because Xterm canvas uses up to z-index 4 */
+  z-index: 5;
 }
 
 #code-space-bottom-bar button {
