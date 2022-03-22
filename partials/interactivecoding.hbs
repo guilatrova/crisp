@@ -77,3 +77,18 @@ function toggleCodeSpace() {
         }
     }
 </script>
+
+<!-- Shortcuts -->
+<script type="text/javascript">
+    window.onkeyup = function(e){
+        if(e.ctrlKey && (e.code == 'Quote' || e.code == 'Backquote')){
+            toggleCodeSpace();
+        }
+    }
+
+    document.getElementById("ace-editor").onkeydown = function(e) {
+        if ((e.metaKey || e.ctrlKey) && e.keyCode == 13) {
+            executePyodide();
+        }
+    }
+</script>
