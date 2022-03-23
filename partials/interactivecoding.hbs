@@ -94,9 +94,13 @@ function toggleCodeSpace() {
 
     function executePyodide() {
         const writtenCode = editor.getValue();
-        const output = pyodide.runPython(writtenCode)
-        if (output) {
-            term.writeln(output)
+        try {
+            const output = pyodide.runPython(writtenCode)
+            if (output) {
+                term.writeln(output)
+            }
+        } catch (err) {
+            term.writeln('\x1b[1;31m' + err.toString() + '\x1b[37m');
         }
     }
 </script>
