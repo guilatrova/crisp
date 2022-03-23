@@ -85,6 +85,10 @@ function toggleCodeSpace() {
             stdout: (text) => {term.writeln(text);},
             stderr: (text) => {term.writeln(text);}
         });
+
+        if (typeof pyodidePackages !== 'undefined') {
+            pyodide.loadPackage(pyodidePackages);
+        }
     }
     loadpyodide();
 
