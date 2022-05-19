@@ -93,6 +93,7 @@ function toggleCodeSpace() {
     loadpyodide();
 
     function executePyodide() {
+        term.clear();
         const writtenCode = editor.getValue();
         try {
             const output = pyodide.runPython(writtenCode)
