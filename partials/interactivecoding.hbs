@@ -89,6 +89,10 @@ function toggleCodeSpace() {
         if (typeof pyodidePackages !== 'undefined') {
             pyodide.loadPackage(pyodidePackages);
         }
+
+        if (typeof onPyodideLoaded !== 'undefined') {
+            onPyodideLoaded()
+        }
     }
     loadpyodide();
 
