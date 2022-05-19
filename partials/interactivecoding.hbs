@@ -92,11 +92,12 @@ function toggleCodeSpace() {
     }
     loadpyodide();
 
-    function executePyodide() {
+    async function executePyodide() {
         term.clear();
         const writtenCode = editor.getValue();
+
         try {
-            const output = pyodide.runPython(writtenCode)
+            const output = await pyodide.runPythonAsync(writtenCode)
             if (output) {
                 term.writeln(output)
             }
