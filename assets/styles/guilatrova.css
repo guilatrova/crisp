@@ -2,11 +2,10 @@
     color: #3459AD
 }
 
-.featured a.post-link,
+/* .featured a.post-link,
 #series-content h3 a {
-    font-weight: 800 !important;
-    color: black;
-}
+
+} */
 
 #series-content section {
     padding-left: 1em;
