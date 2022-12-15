@@ -8,5 +8,10 @@
         "from": "/project-tryceratops/",
         "to": "/how-to-write-linter-python/",
         "permanent": true
+    },
+    {
+        "from": "/async-python-in-real-life/",
+        "to": "/how-python-async-works/",
+        "permanent": true
     }
 ]
