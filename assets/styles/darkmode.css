@@ -1,0 +1,107 @@
+/* ============================================================
+   Dark / Light mode for Crisp (guilatrova)
+   Light is the default; dark applies when <html data-theme="dark">.
+   Initial theme is chosen by the inline script in default.hbs
+   (localStorage -> system preference), and toggled by #theme-toggle.
+   ============================================================ */
+
+/* smooth transition when switching */
+html, body, article, code, pre, #social-bar, .taglist a {
+	transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
+
+/* ----- Toggle button (sits inside the always-dark sidebar) ----- */
+#theme-toggle {
+	-webkit-appearance: none;
+	appearance: none;
+	background: rgba(255, 255, 255, 0.06);
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	border-radius: 50%;
+	width: 2.2em;
+	height: 2.2em;
+	padding: 0;
+	margin: 0.2em 0 1.4em;
+	cursor: pointer;
+	line-height: 1;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: border-color .2s ease, background .2s ease, transform .2s ease;
+}
+#theme-toggle:hover {
+	border-color: #15b532;
+	transform: scale(1.08);
+}
+#theme-toggle::before {
+	content: "🌙";
+	font-size: 1.05em;
+}
+html[data-theme="dark"] #theme-toggle::before {
+	content: "☀️";
+}
+@media only screen and (max-width: 800px) {
+	#theme-toggle { margin-left: auto; margin-right: auto; }
+}
+
+/* ============================================================
+   DARK THEME
+   ============================================================ */
+html[data-theme="dark"],
+html[data-theme="dark"] body {
+	background: #16181a;
+	color: #c9cdd1;
+}
+
+html[data-theme="dark"] a { color: #2ecc55; }              /* keep the green accent, a touch brighter */
+html[data-theme="dark"] header h1 a { color: #e8eaed; }
+html[data-theme="dark"] header p { color: #9aa0a6; }
+
+html[data-theme="dark"] article { border-bottom-color: #2a2e31; }
+html[data-theme="dark"] h3.post-title { color: #e8eaed; border-bottom-color: #2a2e31; }
+html[data-theme="dark"] h1, html[data-theme="dark"] h2,
+html[data-theme="dark"] h3, html[data-theme="dark"] h4,
+html[data-theme="dark"] h5, html[data-theme="dark"] h6 { color: #e8eaed; }
+
+html[data-theme="dark"] article span.post-stamp,
+html[data-theme="dark"] article span.commit-signature,
+html[data-theme="dark"] footer,
+html[data-theme="dark"] footer a { color: #9aa0a6; }
+html[data-theme="dark"] footer a:hover { color: #e8eaed; }
+
+html[data-theme="dark"] .separator,
+html[data-theme="dark"] .feature-star { color: #6b7075; }
+
+html[data-theme="dark"] blockquote { border-left-color: #2a2e31; color: #b6bbc0; }
+html[data-theme="dark"] hr { background: #2a2e31; }
+html[data-theme="dark"] #comments { border-bottom-color: #2a2e31; }
+
+html[data-theme="dark"] code,
+html[data-theme="dark"] pre { background: #23272b; color: #d6dadf; }
+html[data-theme="dark"] #social-bar { background: #23272b; }
+
+html[data-theme="dark"] .taglist a { background-color: #2a2e31; color: #e8eaed; }
+
+html[data-theme="dark"] .kg-bookmark-container { border-color: rgba(255, 255, 255, 0.14); }
+html[data-theme="dark"] .kg-code-card figcaption,
+html[data-theme="dark"] .kg-image-card figcaption,
+html[data-theme="dark"] .kg-gallery-card figcaption { color: #9aa0a6; }
+
+/* ----- highlight.js token colors for dark code blocks ----- */
+html[data-theme="dark"] .hljs { background: #23272b; color: #d6dadf; }
+html[data-theme="dark"] .hljs-comment,
+html[data-theme="dark"] .hljs-quote { color: #7f868d; font-style: italic; }
+html[data-theme="dark"] .hljs-keyword,
+html[data-theme="dark"] .hljs-selector-tag,
+html[data-theme="dark"] .hljs-built_in,
+html[data-theme="dark"] .hljs-meta { color: #c678dd; }
+html[data-theme="dark"] .hljs-string,
+html[data-theme="dark"] .hljs-attr,
+html[data-theme="dark"] .hljs-regexp { color: #98c379; }
+html[data-theme="dark"] .hljs-number,
+html[data-theme="dark"] .hljs-literal { color: #d19a66; }
+html[data-theme="dark"] .hljs-title,
+html[data-theme="dark"] .hljs-section,
+html[data-theme="dark"] .hljs-name { color: #61afef; }
+html[data-theme="dark"] .hljs-tag { color: #e06c75; }
+html[data-theme="dark"] .hljs-type,
+html[data-theme="dark"] .hljs-class .hljs-title { color: #e5c07b; }
