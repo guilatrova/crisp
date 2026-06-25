@@ -58,6 +58,13 @@ html[data-theme="dark"] header p { color: #9aa0a6; }
 
 html[data-theme="dark"] article { border-bottom-color: #2a2e31; }
 html[data-theme="dark"] h3.post-title { color: #e8eaed; border-bottom-color: #2a2e31; }
+
+/* post listing title links (guilatrova.css hardcodes #3459AD, too dark on dark bg) */
+html[data-theme="dark"] .post-title a.post-link { color: #6ea8fe; }
+html[data-theme="dark"] .post-title a.post-link:hover { color: #9ec5ff; }
+
+/* details/summary disclosure arrow (was #444) */
+html[data-theme="dark"] summary:before { border-left-color: #9aa0a6; }
 html[data-theme="dark"] h1, html[data-theme="dark"] h2,
 html[data-theme="dark"] h3, html[data-theme="dark"] h4,
 html[data-theme="dark"] h5, html[data-theme="dark"] h6 { color: #e8eaed; }
